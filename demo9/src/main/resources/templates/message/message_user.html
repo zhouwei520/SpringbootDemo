@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="'用户编号'+${user.mid}"></p>
+    <p th:text="'用户姓名'+${user.name}"></p>
+    <p th:text="'用户年龄'+${user.age}"></p>
+    <p th:text="'用户工资'+${user.salary}"></p>
+    <p th:text="'出生日期'+${user.birthday}"></p>
+    <p th:text="'出生日期'+${#dates.format(user.birthday,'yyyy-MM-dd')}"></p>
+      <hr/>
+    <span  th:if="${user.age lt 18}">
+        未成年
+    </span>
+    <hr/>
+    <span th:if="${user.name eq '微微'}">
+        欢迎微微来访问博客
+    </span>
+    <hr/>
+    <span th:unless="${user.age gt 18}">
+        你不满18岁 无法看电影哈哈
+    </span>
+    <hr/>
+    <span th:switch="${user.mid}">
+        <p th:case="100"> mid为101的员工来了</p>
+         <p th:case="99"> mid为101的员工来了</p>
+         <p th:case="*"> 没有匹配成功的数据</p>
+    </span>
+
+
+
+     <div th:object="${user}">
+         <p th:text="'用户编号'+*{mid}"></p>
+         <p th:text="'用户姓名'+*{name}"></p>
+         <p th:text="'用户年龄'+*{age}"></p>
+         <p th:text="'用户工资'+*{salary}"></p>
+         <p th:text="'出生日期'+*{birthday}"></p>
+         <p th:text="'出生日期'+*{#dates.format(birthday,'yyyy-MM-dd')}"></p>
+
+     </div>
+
+</body>
+</html>

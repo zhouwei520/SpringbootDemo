@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type"  content="text/html;charset=UTF-8" >
+    <!--引入资源文件-->
+    <script type="text/javascript" th:src="@{/js/main.js}">
+    </script>
+    <title>thymeleaf 带样式显示</title>
+</head>
+<body>
+<!--转义标签-->
+   <p th:text="'博客网'+${url}"></p>
+<!--原样显示-->
+    <p th:utext="'博客网'+${url}"></p>
+
+  <a th:href="@{/msg/msgsden(url=zw)(id=2)}" th:text="访问"></a>
+  <a href="message_msg.html" th:href="@{/msg/msgsden(url=zw)(id=2)}"></a>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta   http-equiv="Content-Type"   content="text/html;charset=UTF-8" >
+    <title>thymeleaf Map集合遍历</title>
+</head>
+<body>
+
+<table border="1">
+    <tr><td>NO</td><td>Key</td><td>mid</td> <td>姓名</td><td>年龄</td><td>奇数</td><td>偶数</td></tr>
+    <tr th:each="user,userarr:${user}">
+        <td th:text="${userarr.index+1}"></td>
+        <td th:text="${user.getKey()}"></td>
+        <td th:text="${user.getValue().mid}"></td>
+        <td th:text="${user.getValue().name}"></td>
+        <td th:text="${user.getValue().age}"></td>
+        <td th:text="${userarr.even}"></td>
+        <td th:text="${userarr.odd}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

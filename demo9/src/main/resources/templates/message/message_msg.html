@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+    <title>thymeleaf 显示信息处理</title>
+</head>
+<body>
+      <!--/*@thymesVar id="url" type="博客网站"*/-->
+      <p th:text="'博客网站'+${url}"></p>
+      <!--/*@thymesVar id="id" type="id"*/-->
+      <p th:text="'id='+${id}"></p>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Title</title>
+</head>
+<footer th:fragment="companyInfo">
+    <p style="color: red">zw(程序生活)</p>
+
+    <!--/*@thymesVar id="id" type="com"*/-->
+    <p th:text="${id}"/>、<p th:text="${suid}"></p>
+    <!--/*@thymesVar id="suid" type="com"*/-->
+</footer>
+</html>

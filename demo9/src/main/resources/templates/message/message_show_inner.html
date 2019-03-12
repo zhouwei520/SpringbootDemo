@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta  http-equiv="Content-Type"  content="text/html;charset=UTF-8" >
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${#httpServletRequest.getRemoteAddr()}"></p>
+<p th:text="${#httpServletRequest.getAttribute(requestMessage)}"></p>
+<p th:text="${#httpSession.getId()}"></p>
+<p th:text="${#httpServletRequest.getServletContext().getRealPath('/')}"></p>
+
+<hr/>
+  <p th:utext="'url= '+${url}"></p>
+   <!--/*@thymesVar id="msg" type="msg"*/-->
+   <p th:utext="'msg ='+${msg}"></p>
+<!--/*@thymesVar id="requestMessage" type=""*/-->
+<p th:text="'requestMessage='+${requestMessage}"></p>
+<!--/*@thymesVar id="sessionMessage" type="session.sessionMessage"*/-->
+<p th:text="'sessionMessage='+${session.sessionMessage}"></p>
+
+
+<!--/*@thymesVar id="applicationMessage" type="annotation.annotation"*/-->
+<!--/*@thymesVar id="application" type="application"*/-->
+<p th:text="'applicationMessage='+${application.applicationMessage}"></p>
+
+<p th:utext="'urls='+${url2}"></p>
+
+</body>
+</html>

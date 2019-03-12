@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--suppress ALL-->
+<head>
+    <meta http-equiv="Content-Type"  content="text/html;charset=UTF-8" >
+    <title>模板集合遍历</title>
+</head>
+<body>
+
+  <table style="border: red" border="1">
+      <tr><td>NO</td><td>mid</td> <td>姓名</td><td>年龄</td><td>奇数</td><td>偶数</td></tr>
+       <tr th:each="user,userarr:${user}">
+           <td th:text="${userarr.index+1}"></td>
+          <td th:text="${user.mid}"></td>
+           <td th:text="${user.name}"></td>
+           <td th:text="${user.age}"></td>
+           <td th:text="${userarr.even}"></td>
+           <td th:text="${userarr.odd}"></td>
+       </tr>
+
+  </table>
+ <!-- <div th:replace="@{/commons/footer}::companyInfo" th:with="id=1,suid=15"></div>-->
+  <br/>
+  <div th:include="@{/commons/footer}::companyInfo" th:with="id=3,suid=35"></div>
+</body>
+</html>
