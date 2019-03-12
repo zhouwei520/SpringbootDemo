@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+ profiles: dev
+server:
+  port: 8080
+---
+spring:
+ profiles: beta
+server:
+  port: 9090
+---
+spring:
+ profiles: product
+server:
+  port: 80
