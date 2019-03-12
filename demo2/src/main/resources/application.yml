@@ -1,0 +1,5 @@
+spring:   #表示该配置直接为Spring 容器负责处理
+  messages:   #表示进行资源配置
+    basename: il8n/Messages,il8n/Pages #资源文件的名称
+server:     #修改访问端口
+  port: 80
