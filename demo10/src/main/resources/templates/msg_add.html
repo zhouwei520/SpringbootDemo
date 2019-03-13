@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <form  th:action="@{/msg_add}"  method="post" >
+          编号<input type="text" value="101"  name="id">
+          姓名<input type="text" value="MSHEZW" name="name">
+          <input type="submit" value="提交">
+      </form>
+</body>
+</html>
